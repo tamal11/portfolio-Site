@@ -1,0 +1,619 @@
+/*
+Theme Name: personal portfolio
+
+Author: jumtech
+Author URI: https:/jumtech.net/
+Description: fully reponsive awesome porpofilo theme
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: twentyseventeen
+Tags: portfolio, two-columns,fixed header, flexible-header, techical-portfolio
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+
+
+/* You custom Styles */
+
+
+/* :root {
+  --dark: var(#2e2e2e);
+  --light: var(#9f9f9f);
+  --orange: var(#f37614);
+} */
+@font-face {
+    font-family: "Gilroy Extrabold", sans-serif;
+    src: url("/fonts/Gilroy-ExtraBold.otf");
+  }
+  @font-face {
+    font-family: "Gilroy Light", sans-serif;
+    src: url("/fonts/Gilroy-Light.otf");
+  }
+  
+  html {
+    box-sizing: border-box;
+    font-family: "Gilroy Light", sans-serif;
+    font-size: 16px;
+  }
+  body {
+    font-size: 1rem;
+    background-color: #fffdfd;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* core style */
+  h1,
+  h2,
+  h3,
+  p {
+    margin: 0;
+    padding: 0;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  a {
+    text-decoration: none;
+  }
+  .container-header h1,
+  .container-header li,
+  .contact p {
+    font-size: 1.75rem;
+  }
+  
+  /* slogan */
+  .slogan {
+    display: flex;
+  
+    align-items: center;
+    justify-content: flex-end;
+    text-align: end;
+    height: 3rem;
+  }
+  .slogan p {
+    margin-right: 7rem;
+  }
+  
+  /* layout */
+  .container-flex {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.875em;
+  }
+  .site-main {
+    width: 60%;
+    margin-left: 40em;
+  }
+  .site-header {
+    padding-left: 16em;
+    width: 30%;
+    position: fixed;
+  }
+  /* mobile header*/
+  .site-header .mobile-header {
+    display: none;
+  }
+  
+  /* mobile nav */
+  .site-header .mobile-nav {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: #2e2e2e;
+  }
+  .mobile-nav li {
+    padding: 1rem 0;
+  }
+  .mobile-nav a {
+    font-size: 3rem;
+    color: #f37614;
+    padding: 0 1em;
+  }
+  .mobile-nav li:hover,
+  .mobile-nav li:focus {
+    background-color: #fff;
+  }
+  .mobile-nav i {
+    color: #f37614;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  
+  /* header */
+  
+  .container-header h1 {
+    margin-top: 1.5rem;
+    font-family: "Gilroy Extrabold", sans-serif;
+    font-weight: 800;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.21;
+    letter-spacing: normal;
+    text-align: left;
+    color: #2e2e2e;
+  }
+  
+  .container-header .designation {
+    color: #9f9f9f;
+    font-size: 1.1875rem;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2;
+    letter-spacing: normal;
+    text-align: left;
+  }
+  .container-header nav {
+    margin-top: 4.3125rem;
+  }
+  .container-header nav a {
+    color: #9f9f9f;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.36;
+    letter-spacing: normal;
+    text-align: left;
+  }
+  .container-header nav a:hover,
+  .container-header nav a:focus{
+    color: #f37614;
+    font-weight: 800;
+  }
+  
+  .container-header img {
+    width: 111px;
+    height: 111px;
+    border-radius: 50%;
+  }
+  
+  .contact {
+    margin-top: 2.3125rem;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.36;
+    letter-spacing: normal;
+    text-align: left;
+    color: #646464;
+  }
+  
+  .contact ul {
+    display: flex;
+  }
+  .contact li {
+    font-size: 1.1875rem;
+    margin-right: 1.375em;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2;
+    letter-spacing: normal;
+    text-align: left;
+  }
+  .contact li a {
+    color: #f37614;
+  }
+  .contact li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* main */
+  
+  /* Section introduction */
+  
+  .site-main .hello {
+    font-family: "Gilroy Extrabold", sans-serif;
+    font-size: 2.8rem;
+    font-weight: 800;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    text-align: left;
+    color: #2e2e2e;
+  }
+  
+  .site-main .container-para-one {
+    margin-top: 2.375rem;
+    font-size: 1.25rem;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 38px;
+    letter-spacing: normal;
+    text-align: left;
+    color: #2e2e2e;
+  }
+  .site-main .container-para-two {
+    margin-top: 2.9375rem;
+    font-size: 1.25rem;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 38px;
+    letter-spacing: normal;
+    text-align: left;
+    color: #2e2e2e;
+  }
+  .site-main .section-introduction {
+    margin-right: 16rem;
+  }
+  
+  .container-para-one a,
+  .container-para-two a {
+    color: #f37614;
+    text-decoration: underline;
+  }
+  
+  /* site main section h2 typography */
+  .site-main .section h2 {
+    font-family: "Gilroy Extrabold", sans-serif;
+    font-size: 2.25rem;
+    font-weight: 800;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.06;
+    letter-spacing: normal;
+    text-align: left;
+    color: #2e2e2e;
+    margin-bottom: 3.4375rem;
+    position: relative;
+  }
+  .site-main .section h2::before {
+    content: "";
+    position: absolute;
+    width: 44px;
+    height: 4px;
+    background-color: #2e2e2e;
+    top: -17px;
+  }
+  
+  .section {
+    margin-bottom: 8.6875em;
+  }
+  .section:last-child {
+    margin-bottom: 0;
+  }
+  
+  /* Section Projects*/
+  .section-projects {
+    margin-top: 13.875rem;
+  }
+  
+  .section-projects .projects {
+    margin-bottom: 2.875em;
+  }
+  .section-projects .projects:last-child {
+    margin: 0;
+  }
+  
+  .section-projects h3 {
+    font-family: "Gilroy Extrabold", sans-serif;
+    font-size: 1.625rem;
+    font-weight: 800;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.46;
+    letter-spacing: normal;
+    text-align: left;
+    color: #2e2e2e;
+  }
+  .section-projects a {
+    color: #2e2e2e;
+  }
+  .section-projects a:hover {
+    color: #f37d1f;
+  }
+  
+  .section-projects p {
+    font-size: 1.25rem;
+    color: #9f9f9f;
+  }
+  .projects {
+    position: relative;
+  }
+  #project-waterlotus::before {
+    content: "";
+    width: 420px;
+    height: 2px;
+    position: absolute;
+    bottom: 24px;
+    background-color: #9f9f9f;
+  }
+  #project-jumtech::before {
+    content: "";
+    width: 300px;
+    height: 2px;
+    position: absolute;
+    bottom: 24px;
+    background-color: #9f9f9f;
+  }
+  #project-liton::before {
+    content: "";
+    width: 300px;
+    height: 2px;
+    position: absolute;
+    background-color: #9f9f9f;
+    bottom: 24px;
+  }
+  #project-jumjournal::before {
+    content: "";
+    width: 380px;
+    height: 2px;
+    position: absolute;
+    background-color: #9f9f9f;
+    bottom: 24px;
+  }
+  
+  /* Section Tech skills */
+  
+  .section-techskills .tech-field {
+    margin-bottom: 2em;
+  }
+  .section-techskills .tech-field:last-child {
+    margin: 0;
+  }
+  
+  .section-techskills .tech-title {
+    color: #9f9f9f;
+    font-size: 1.25rem;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.9;
+    letter-spacing: normal;
+    text-align: left;
+    color: #9f9f9f;
+  }
+  
+  .section-techskills .tech-names {
+    font-size: 1.375rem;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.73;
+    letter-spacing: normal;
+    text-align: left;
+    color: #2e2e2e;
+  }
+  
+  /* section experiences */
+  
+  .section-experiences .exp-field {
+    margin-bottom: 3.4375rem;
+  }
+  .section-experiences .exp-filed:last-child {
+    margin: 0;
+  }
+  
+  .section-experiences .exp-field-sector {
+    font-size: 1.25rem;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.9;
+    letter-spacing: normal;
+    text-align: left;
+    color: #9f9f9f;
+  }
+  .section-experiences .exp-sector-info {
+    font-size: 1.375rem;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: left;
+    color: #2e2e2e;
+  }
+  .exp-sector-info a {
+    color: #2e2e2e;
+    text-decoration: underline;
+  }
+  
+  /* Section achivements */
+  
+  .section-achivements p {
+    font-size: 1.375rem;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.73;
+    letter-spacing: normal;
+    text-align: left;
+  }
+  .section-achivements a {
+    color: #f37614;
+    text-decoration: underline;
+  }
+  
+  /* Footer */
+  
+  .site-footer {
+    margin-top: 22em;
+    margin-bottom: 3.375em;
+  }
+  .site-footer ul {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .site-footer ul li:first-child {
+    margin-right: 21.875rem;
+  }
+  
+  /* Media Querires */
+  
+  @media (min-width: 700px) and (max-width: 899px) {
+    html {
+      font-size: 14px;
+    }
+    .site-main {
+      margin-left: 20em;
+    }
+    .site-header {
+      width: 32%;
+      padding-left: 2em;
+    }
+    .site-main .section-introduction {
+      margin-right: 2rem;
+    }
+    .site-footer ul {
+      display: flex;
+      justify-content: space-around;
+    }
+    .site-footer ul li:first-child {
+      margin-right: 0;
+      margin-bottom: 1rem;
+    }
+  }
+  
+  @media (min-width: 900px) and (max-width: 1199px) {
+    .site-main {
+      margin-left: 25em;
+      
+    }
+    .site-header {
+      padding-left: 4em;
+    }
+    .site-main .section-introduction {
+      margin-right: 2rem;
+    }
+    .site-footer ul {
+      display: flex;
+      justify-content: space-around;
+    }
+    .site-footer ul li:first-child {
+      margin-right: 0;
+    }
+  }
+  /* for small screen */
+  @media (max-width: 699px) {
+    html {
+      font-size: 12px;
+    }
+    .slogan {
+      display: none;
+    }
+  
+    .container-flex {
+      flex-direction: column;
+    }
+  
+    .site-header .container-header {
+      display: none;
+    }
+    .site-main {
+      width: 90%;
+      margin-left: 0;
+      margin-top: 10em;
+    }
+  
+    .site-main .container-para-one,
+    .site-main .container-para-two {
+      line-height: 35px;
+    }
+  
+    .site-main .section-introduction {
+      margin-right: 0;
+    }
+    .site-main .container {
+      padding: 0 1.5rem;
+    }
+  
+    .section-projects {
+      margin-top: 8.875rem;
+    }
+  
+    .site-footer ul li:first-child {
+      margin-right: 0;
+      margin-bottom: 1rem;
+    }
+    .site-footer ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+  
+    #project-waterlotus::before,
+    #project-jumtech::before,
+    #project-liton::before,
+    #project-jumjournal::before {
+      bottom: 20px;
+    }
+    .site-header {
+      padding: 0;
+      width: 100%;
+      position: sticky;
+      top: 0;
+      border-bottom: 1px solid #9f9f9f;
+      z-index: 5;
+      background: #9f9f9f;
+    }
+  
+    /* mobile header */
+    .site-header .mobile-header {
+      width: 100%;
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      padding: 1em 0;
+    }
+    .mobile-header img {
+      display: block;
+      margin-left: 2em;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+    .mobile-header i {
+      margin-right: 1em;
+    }
+  
+    /* Mobile nav */
+  }
+  
+  /* add martin for section in desktop view */
+  .addMargin {
+    margin-top: 300px;
+    transition: all 2s;
+  }
+  
+  /* Add margin for section in mobile and small screen view */
+  .mobile-section-margin {
+    margin-top: 450px;
+    transition: all 3s;
+  }
+  
+  
+  
+  /* for typing effect cursor */
+  
+  .cursor {
+    display: inline-block;
+    height: 40px;
+    width: 2px;
+    background: #aaa;
+    vertical-align: middle;
+    animation: 1s blink linear infinite;
+  }
+  @keyframes blink {
+    0%,49% {
+      opacity: 0;
+    }
+    50%,100% {
+      opacity: 1;
+    }
+  }
